@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Login Suit" verbose="10">
+    <parameter name="deviceName_" value="device_One" />
+    <parameter name="UDID_" value="192.168.57.101:5555" />
+   <!-- <parameter name="platformVersion_" value="Version_One" /> -->
+    <parameter name="URL_" value="192.168.1.14:4723/wd/hub"/>
+    <parameter name="appPackage_" value="com.almog.gymglish" />
+    <parameter name="appActivity_" value="com.almog.gymglish.MainActivity" />
+
+
+    <test name="Login" preserve-order="true">
+        <classes>
+            <class name="TestCases.TestLogin">
+                <methods>
+                    <include name="testLogin">
+                        <parameter name="userName_" value="MyUser"/>
+                        <parameter name="password_" value="Password"/>
+                    </include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
